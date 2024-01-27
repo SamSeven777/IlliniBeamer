@@ -1,0 +1,54 @@
+% beamerouterthemeIllini.sty
+
+\RequirePackage{tikz}
+
+% Customize the title page
+\setbeamertemplate{title page}{%
+    \begin{center}
+        \usebeamerfont{title}\inserttitle\par
+        \vskip0.5em
+        \usebeamerfont{author}\insertauthor\par
+        \vskip1em
+        \usebeamerfont{institute}\insertinstitute\par
+    \end{center}
+}
+
+% Customize the headline template
+\setbeamertemplate{headline}{%
+    \ifnum\thepage=1
+        \begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperheight]{headline}
+            \begin{tikzpicture}
+                \fill[illini-orange] (0,0) -- (0.33\paperwidth,0) -- (0.33\paperwidth-0.12\paperheight,0.06\paperheight) -- (0,0.06\paperheight) -- cycle;
+            \end{tikzpicture}\hfill%
+            \includegraphics[height=0.06\paperheight]{assets/University-Wordmark-Reversed-Orange-RGB.png}\hfill%
+            \begin{tikzpicture}
+                \fill[illini-orange] (0,0) -- (0.33\paperwidth,0) -- (0.33\paperwidth,0.06\paperheight) -- (0.12\paperheight,0.06\paperheight) -- cycle;
+            \end{tikzpicture}
+        \end{beamercolorbox}
+    \else
+        \begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperheight,sep=0.01\paperheight]{headline}
+            \hfill\includegraphics[height=0.04\paperheight]{assets/BlockI-Logo-Reversed-Orange-RGB.png}
+        \end{beamercolorbox}
+    \fi
+}
+
+% Customize the footline template
+\setbeamertemplate{footline}{%
+    \ifnum\thepage=1
+        \begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperheight]{footline}
+            \begin{tikzpicture}
+                \fill[illini-blue] (0,0) -- (0.33\paperwidth-0.12\paperheight,0) -- (0.33\paperwidth,0.06\paperheight) -- (0,0.06\paperheight) -- cycle;
+            \end{tikzpicture}\hfill%
+            \begin{tikzpicture}
+                \fill[illini-blue] (0,0) -- (0.33\paperwidth-0.12\paperheight,0) -- (0.33\paperwidth-0.12\paperheight,0.06\paperheight) -- (-0.12\paperheight,0.06\paperheight) -- cycle;
+            \end{tikzpicture}
+        \end{beamercolorbox}
+    \else
+        \begin{beamercolorbox}[wd=\paperwidth,ht=0.06\paperheight]{footline}
+            \begin{tikzpicture}
+            \fill[illini-blue] (0,0) -- (0.618\paperwidth,0) -- (0.618\paperwidth-0.12\paperheight,0.06\paperheight) -- (0,0.06\paperheight) -- cycle;
+            \end{tikzpicture}\hfill
+            \raisebox{2ex}{\insertframenumber}\hspace*{1ex}
+        \end{beamercolorbox}
+    \fi
+}

@@ -1,0 +1,72 @@
+% This is a UIUC theme beamer template
+
+%\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer} % Change to 16:9
+
+\usetheme{Illini}
+
+\title{Illini Beamer Template}
+\author{Runyu Qi}
+\institute{University of Illinois at Urbana-Champaign}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \tableofcontents
+\end{frame}
+
+\section{Test}
+
+\begin{frame}{Text}
+    This is the first slide.
+\end{frame}
+
+\begin{frame}{Lists}
+    \begin{itemize}
+        \item first
+        \begin{itemize}
+            \item second
+            \begin{itemize}
+                \item third
+            \end{itemize} 
+        \end{itemize}
+    \end{itemize}
+
+    \begin{enumerate}
+        \item first
+        \item second
+        \begin{enumerate}
+            \item first
+            \item second
+            \begin{enumerate}
+                \item first
+                \item second
+            \end{enumerate}
+        \end{enumerate}
+            
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Blocks}
+    
+    In this slide, some important text will be
+    \alert{highlighted} because it's important.
+    Please, don't abuse it.
+    
+    \begin{block}{Block}
+    Sample text
+    \end{block}
+
+\end{frame}
+
+\section{Done}
+\begin{frame}
+    \centering \Huge Thanks
+\end{frame}
+
+\end{document}
